@@ -6,7 +6,7 @@
             "value": [
                 {
                     "VnetName": "Main-we-vnet",
-                    "ResourceGroupName": "testnab2-rg",
+                    "ResourceGroupName": "testnab3-rg",
                     "VnetAddressSpace": "10.66.0.0/16",
                     "Region": "westeurope",
                     "Subnets": [
