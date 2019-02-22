@@ -5,7 +5,7 @@
       "ParameterArray": {
           "type": "array"
       },
-      "rebuildVNET": {"type": "string","defaultValue": "No"}
+      "rebuildVNET": {"type": "string","defaultValue": "Yes"}
   },
   "variables": {},
   "resources": [
