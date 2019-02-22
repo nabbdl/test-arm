@@ -19,12 +19,12 @@
       }
   },
   "variables": {
-    "SubnetTemplateFolder": "nestedtemplates",
-    "SubnetTemplateFileName": "Subnet.json",
-	"SubnetParametersFileName": "Subnet.parameters.json",
-	"RouteTableTemplateFolder": "nestedtemplates",
-    "RouteTableTemplateFileName": "RouteTable.json",
-	"RouteTableParametersFileName": "RouteTable.parameters.json"
+      "SubnetTemplateFolder": "nestedtemplates",
+      "SubnetTemplateFileName": "Subnet.json",
+      "SubnetParametersFileName": "Subnet.parameters.json",
+      "RouteTableTemplateFolder": "nestedtemplates",
+      "RouteTableTemplateFileName": "RouteTable.json",
+      "RouteTableParametersFileName": "RouteTable.parameters.json"
   },
   "resources": [ 
       {
