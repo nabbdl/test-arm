@@ -5,14 +5,14 @@
         "RouteTablesArray": {
             "value": [
                 {
-                    "name": "DefaultRouteTable",
+                    "RouteName": "DefaultRouteTable",
                     "addressPrefix": "testnab3-rg",
                     "nextHopType": "VirtualAppliance",
                     "nextHopIpAddress": "10.3.1.10",
                     "Region": "westeurope"
                 },
                 {
-                    "name": "testRouteTable",
+                    "RouteName": "testRouteTable",
                     "addressPrefix": "testnab3-rg",
                     "nextHopType": "VirtualAppliance",
                     "nextHopIpAddress": "1.1.1.1",
