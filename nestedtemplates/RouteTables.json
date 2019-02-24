@@ -33,7 +33,6 @@
                            "name": "[parameters('routeTablesArray')[copyIndex()].RouteName]",
                            "addressPrefix": "[parameters('routeTablesArray')[copyIndex()].addressPrefix]",
                            "nextHopType": "[parameters('routeTablesArray')[copyIndex()].nextHopType]",
-                           "addressPrefix": "[parameters('routeTablesArray')[copyIndex()].addressPrefix]",
                            "nextHopIpAddress": "[parameters('routeTablesArray')[copyIndex()].nextHopIpAddress]"
                        }
                   ]
