@@ -37,6 +37,9 @@
                         {
                             "name": "subnet-10-66-10-0-24",
                             "addressPrefix": "10.66.10.0/24"
+                        },
+                        {
+                            "rebuildVNET": "Yes"
                         }
                     ]
 
