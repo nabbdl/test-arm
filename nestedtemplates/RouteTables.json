@@ -15,7 +15,7 @@
                 "name": "RoutesCopy",
                 "count": "[length(parameters('routeTablesArray'))]"
             },
-            "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].name]",
+            "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routeTableName]",
             "resourceGroup": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].ResourceGroupName]",
             "properties": {
                 "mode": "Incremental",
