@@ -1,0 +1,47 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "ParameterArray": {
+            "value": [
+                {
+                    "name": "Main-we-vnet",
+                    "ResourceGroupName": "testnab3-rg",
+                    "VnetAddressSpace": "10.66.0.0/16",
+                    "Region": "westeurope",
+                    "Subnets": [
+                        {
+                            "name": "subnet-10-66-1-0-24",
+                            "addressPrefix": "10.66.1.0/24",
+                            "routeTable": {
+                                "id": "[resourceId('Microsoft.Network/routeTables','DefaultRouteTable')]"
+                              }
+                        },
+                        {
+                            "name": "subnet-10-66-2-0-24",
+                            "addressPrefix": "10.66.2.0/24"
+                        },
+                        {
+                            "name": "subnet-10-66-3-0-24",
+                            "addressPrefix": "10.66.3.0/24"
+                        },
+                        {
+                            "name": "subnet-10-66-4-0-24",
+                            "addressPrefix": "10.66.4.0/24"
+                        },
+                        {
+                            "name": "subnet-10-66-5-0-24",
+                            "addressPrefix": "10.66.5.0/24"
+                        },
+                        {
+                            "name": "subnet-10-66-10-0-24",
+                            "addressPrefix": "10.66.10.0/24"
+                        }
+                        
+                    ],
+                    "rebuildVNET": "Yes"
+                }
+            ]
+        }
+    }
+}
