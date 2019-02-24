@@ -5,6 +5,7 @@
         "routeTablesArray": {
             "value": [
                 {
+                    "routeTableName" : "DefaultRouteTable",
                     "routes": [
                         {
                             "name": "DefaultRouteTable",
@@ -15,7 +16,7 @@
                     ]
                 },
                 {
-                    
+                    "routeTableName" : "testRouteTable",
                     "routes": [
                         {
                             "name": "testRouteTable",
