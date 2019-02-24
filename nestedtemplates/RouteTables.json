@@ -10,9 +10,9 @@
     "resources": [
         {
             "apiVersion": "2017-05-10",
-            "name": "[concat('Deploy-',parameters('routeTablesArray')[copyIndex('Routes')].RouteName)]",
+            "name": "[concat('Deploy-',parameters('routeTablesArray')[copyIndex('routeTables')].RouteName)]",
             "type": "Microsoft.Resources/deployments",
-            "resourceGroup": "[parameters('routeTablesArray')[copyIndex('Routes')].ResourceGroupName]",
+            "resourceGroup": "[parameters('routeTablesArray')[copyIndex('routeTables')].ResourceGroupName]",
             "copy": {
                 "name": "routeTables",
                 "count": "[length(parameters('routeTablesArray'))]",
