@@ -27,7 +27,7 @@
                         {
                             "apiVersion": "2017-10-01",
                             "type": "Microsoft.Network/routeTables",
-                            "name": "[parameters('ParameterArray')[copyIndex('RoutesCopy')].routeTableName]",
+                            "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routeTableName]",
                             "location": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].Region]",
                             "properties": {
                                 "copy": [
