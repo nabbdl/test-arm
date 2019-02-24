@@ -6,7 +6,7 @@
             "value": [
                 {
                     "routeTableName": "DefaultRouteTable",
-                    "ResourceGroupName": "testnab-rg3",
+                    "ResourceGroupName": "testnab3-rg",
                     "Region": "westeurope",
                     "routes": [
                         {
@@ -19,7 +19,7 @@
                 },
                 {
                     "routeTableName": "testRouteTable",
-                    "ResourceGroupName": "testnab-rg3",
+                    "ResourceGroupName": "testnab3-rg",
                     "Region": "westeurope",
                     "routes": [
                         {
