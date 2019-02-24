@@ -5,7 +5,8 @@
         "routeTablesArray": {
             "value": [
                 {
-                    "routeTableName" : "DefaultRouteTable",
+                    "routeTableName": "DefaultRouteTable",
+                    "ResourceGroupName": "testnab-rg3",
                     "routes": [
                         {
                             "name": "DefaultRouteTable",
@@ -16,7 +17,8 @@
                     ]
                 },
                 {
-                    "routeTableName" : "testRouteTable",
+                    "routeTableName": "testRouteTable",
+                    "ResourceGroupName": "testnab-rg3",
                     "routes": [
                         {
                             "name": "testRouteTable",
