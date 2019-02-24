@@ -27,7 +27,7 @@
                         {
                             "apiVersion": "2017-10-01",
                             "type": "Microsoft.Network/routeTables",
-                            "name": "[concat('UDR-',parameters('routeTablesArray')[copyIndex('RoutesCopy').routes[copyIndex('routes')].name]"],
+                            "name": "[concat('UDR-',parameters('routeTablesArray')[copyIndex('RoutesCopy').routes[copyIndex('routes')].name)]",
                             "location": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].Region]",
                             "properties": {
                                 "copy": [
