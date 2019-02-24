@@ -1,46 +1,56 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
     "contentVersion": "1.0.0.0",
-    "variables": {},
     "parameters": {
-          "routeTablesArray": {
-              "type": "array"
-          }
+        "routeTablesArray": {
+            "type": "array"
+        }
     },
+    "variables": {},
     "resources": [
         {
             "apiVersion": "2017-05-10",
-            "name": "[concat('Deploy-',parameters('routeTablesArray')[copyIndex('routeTables')].RouteName)]",
             "type": "Microsoft.Resources/deployments",
-            "resourceGroup": "[parameters('routeTablesArray')[copyIndex('routeTables')].ResourceGroupName]",
             "copy": {
-                "name": "routeTables",
-                "count": "[length(parameters('routeTablesArray'))]",
-                "mode": "Parallel"
+                "name": "RoutesCopy",
+                "count": "[length(parameters('routeTablesArray'))]"
             },
+            "name": "[concat('Deploy-Udr-in-',parameters('routeTablesArray')[copyIndex('RoutesCopy')].RouteName)]",
+            "resourceGroup": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].ResourceGroupName]",
             "properties": {
-              "mode": "Incremental",
-              "template": {
-                  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-                  "contentVersion": "1.0.0.0",
-                  "parameters": {},
-                  "variables": {},
-                  "resources": [
-                       {
-                           "type": "Microsoft.Network/routeTables",
-                           "apiVersion": "2016-06-01",
-                           "name": "[parameters('routeTablesArray')[copyIndex('routeTables')].RouteName]",
-                           "location": "[parameters('routeTablesArray')[copyIndex('routeTables')].Region]",
-                           "properties": { 
-                               "addressPrefix": "[parameters('routeTablesArray')[copyIndex('routeTables')].addressPrefix]",
-                               "nextHopType": "[parameters('routeTablesArray')[copyIndex('routeTables')].nextHopType]",
-                               "nextHopIpAddress": "[parameters('routeTablesArray')[copyIndex('routeTables')].nextHopIpAddress]"
-                           }
-                       }
-                  ]
-               }
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+                    "contentVersion": "1.0.0.0",
+                    "variables": {},
+                    "resources": [
+                        {
+                            "apiVersion": "2017-10-01",
+                            "type": "Microsoft.Network/routeTables",
+                            "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].RouteName)]",
+                            "location": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].Region]",
+                            "properties": {
+                                "copy": [
+                                    {
+                                        "name": "routes",
+                                        "count": "[length(parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes)]",
+                                        "input": {
+                                            "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].name]",
+                                            "properties": {
+                                                "addressPrefix": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].addressPrefix]",
+                                                "nextHopType": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].nextHopType]",
+                                                "nextHopIpAddress": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].nextHopIpAddress]"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                        
+                    ]
+                }
             }
-        }    
+        }
     ],
     "outputs": {}
-  }
+}
