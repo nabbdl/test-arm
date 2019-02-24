@@ -29,10 +29,10 @@
                        {
                            "type": "Microsoft.Network/routeTables",
                            "apiVersion": "2016-06-01",
-                           "location": "[parameters('routeTables')[copyIndex()].location]",
-                           "name": "[parameters('routeTables')[copyIndex()].name]",
-                           "properties": "[parameters('routeTables')[copyIndex()].properties]",
-                           "tags": "[parameters('routeTables')[copyIndex()].tags]"
+                           "location": "[parameters('routeTablesArray')[copyIndex()].location]",
+                           "name": "[parameters('routeTablesArray')[copyIndex()].name]",
+                           "properties": "[parameters('routeTablesArray')[copyIndex()].properties]",
+                           "tags": "[parameters('routeTablesArray')[copyIndex()].tags]"
                        }
                   ]
                }
