@@ -37,7 +37,7 @@
                                         "input": {
                                             "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].name]",
                                             "properties": {
-                                                "addressPrefix": "[parameters('ParametersArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].addressPrefix]",
+                                                "addressPrefix": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].addressPrefix]",
                                                 "nextHopType": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].nextHopType]",
                                                 "nextHopIpAddress": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].nextHopIpAddress]"
                                             }
