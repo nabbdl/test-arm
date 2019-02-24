@@ -5,20 +5,25 @@
         "routeTablesArray": {
             "value": [
                 {
-                    "RouteName": "DefaultRouteTable",
-                    "ResourceGroupName": "testnab3-rg",
-                    "addressPrefix": "0.0.0.0/0",
-                    "nextHopType": "VirtualAppliance",
-                    "nextHopIpAddress": "10.3.1.10",
-                    "Region": "westeurope"
+                    "routes": [
+                        {
+                            "name": "DefaultRouteTable",
+                            "nextHopType": "VirtualAppliance",
+                            "nextHopIpAddress": "10.120.8.10",
+                            "addressPrefix": "0.0.0.0/0"
+                        }
+                    ]
                 },
                 {
-                    "RouteName": "testRouteTable",
-                    "ResourceGroupName": "testnab3-rg",
-                    "addressPrefix": "0.0.0.0/0",
-                    "nextHopType": "VirtualAppliance",
-                    "nextHopIpAddress": "1.1.1.1",
-                    "Region": "westeurope"
+                    
+                    "routes": [
+                        {
+                            "name": "testRouteTable",
+                            "nextHopType": "VirtualAppliance",
+                            "nextHopIpAddress": "10.1.1.1",
+                            "addressPrefix": "0.0.0.0/0"
+                        }
+                    ]
                 }
             ]
         }
