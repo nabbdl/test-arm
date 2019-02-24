@@ -33,7 +33,7 @@
                                 "copy": [
                                     {
                                         "name": "routes",
-                                        "count": "[length(parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes)]",
+                                        "count": "[length(parameters('routeTablesArray')[copyIndex('routes')].routes)]",
                                         "input": {
                                             "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].routes[copyIndex('routes')].name]",
                                             "properties": {
