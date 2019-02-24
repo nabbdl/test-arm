@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "routeTableArray": {
+      "type": "array"
+    }
+  "variables": {},
+  "resources": [
+      {
+          "apiVersion": "2017-05-10",
+          "name": "[concat('Deploy-',parameters('routeTableArray')[copyIndex('Routes')].RouteName)]",
+          "type": "Microsoft.Resources/deployments",
+          "resourceGroup": "[parameters('routeTableArray')[copyIndex('Routes')].ResourceGroupName]",
+          "copy": {
+              "name": "Routes",
+              "count": "[length(parameters('routeTableArray'))]",
+              "mode": "Parallel"
+          },
+          "properties": {
+          "mode": "Incremental",
+          "template": {
+            "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+            "contentVersion": "1.0.0.0",
+            "parameters": {},
+            "variables": {},
+            "resources": [
+              {
+                "type": "Microsoft.Network/routeTables",
+                "apiVersion": "2016-06-01",
+                "location": "[parameters('routeTables')[copyIndex()].location]",
+                "name": "[parameters('routeTables')[copyIndex()].name]",
+                "properties": "[parameters('routeTables')[copyIndex()].properties]",
+                "tags": "[parameters('routeTables')[copyIndex()].tags]"
+              }
+            ],
+    "outputs": {}
+}
