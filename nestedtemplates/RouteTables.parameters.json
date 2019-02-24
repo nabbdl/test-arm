@@ -6,6 +6,7 @@
             "value": [
                 {
                     "RouteName": "DefaultRouteTable",
+                    "ResourceGroupName": "testnab3-rg",
                     "addressPrefix": "testnab3-rg",
                     "nextHopType": "VirtualAppliance",
                     "nextHopIpAddress": "10.3.1.10",
@@ -13,6 +14,7 @@
                 },
                 {
                     "RouteName": "testRouteTable",
+                    "ResourceGroupName": "testnab3-rg",
                     "addressPrefix": "testnab3-rg",
                     "nextHopType": "VirtualAppliance",
                     "nextHopIpAddress": "1.1.1.1",
