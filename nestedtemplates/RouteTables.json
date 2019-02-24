@@ -31,8 +31,7 @@
                            "apiVersion": "2016-06-01",
                            "name": "[parameters('routeTablesArray')[copyIndex('routeTables')].RouteName]",
                            "location": "[parameters('routeTablesArray')[copyIndex('routeTables')].Region]",
-                           "properties": {
-                               
+                           "properties": { 
                                "addressPrefix": "[parameters('routeTablesArray')[copyIndex('routeTables')].addressPrefix]",
                                "nextHopType": "[parameters('routeTablesArray')[copyIndex('routeTables')].nextHopType]",
                                "nextHopIpAddress": "[parameters('routeTablesArray')[copyIndex('routeTables')].nextHopIpAddress]"
