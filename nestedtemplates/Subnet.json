@@ -50,9 +50,6 @@
                                           }
                                       }
                                   }
-                              ],
-                              "DependsOn": [
-                                  "[concat(parameters('ParameterArray')[copyIndex('Vnets')].VnetName)]"
                               ]
                           }
                       }
