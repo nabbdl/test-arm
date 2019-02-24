@@ -15,7 +15,7 @@
                 "name": "RoutesCopy",
                 "count": "[length(parameters('routeTablesArray'))]"
             },
-            "name": "[concat('Deploy-Udr-in-',parameters('routeTablesArray')[copyIndex('RoutesCopy')].RouteName)]",
+            "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].name)]",
             "resourceGroup": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].ResourceGroupName]",
             "properties": {
                 "mode": "Incremental",
@@ -27,7 +27,7 @@
                         {
                             "apiVersion": "2017-10-01",
                             "type": "Microsoft.Network/routeTables",
-                            "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].RouteName)]",
+                            "name": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].name)]",
                             "location": "[parameters('routeTablesArray')[copyIndex('RoutesCopy')].Region]",
                             "properties": {
                                 "copy": [
