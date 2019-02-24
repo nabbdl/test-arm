@@ -24,7 +24,7 @@
                           "apiVersion": "2017-10-01",
                           "type": "Microsoft.Network/virtualNetworks/",
                           "name": "[parameters('ParameterArray')[copyIndex('Vnets')].VnetName]",
-                          "condition": "[equals(parameters('rebuildVNET'),'Yes')]",
+                          "condition": "[equals(parameters('ParameterArray')[copyIndex('Vnets')].rebuildVNET, 'Yes')]",
                           "location": "[parameters('ParameterArray')[copyIndex('Vnets')].Region]",
                           "properties": {
                               "addressSpace": {
