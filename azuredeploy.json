@@ -42,5 +42,23 @@
               }
           }
       }  
+  ],
+  "resources": [ 
+      {
+          "apiVersion": "2017-05-10",
+          "name": "linkedTemplate",
+          "type": "Microsoft.Resources/deployments",
+          "properties": {
+              "mode": "Incremental",
+              "templateLink": {
+                  "uri": "[concat(parameters('_artifactsLocation'), '/', variables('RouteTableTemplateFolder'), '/', variables('RouteTableTemplateFileName'), parameters('_artifactsLocationSasToken'))]",
+                  "contentVersion":"1.0.0.0"
+              },
+              "parametersLink": {
+                  "uri": "[concat(parameters('_artifactsLocation'), '/', variables('RouteTableTemplateFolder'), '/', variables('RouteTableParametersFileName'), parameters('_artifactsLocationSasToken'))]",
+                  "contentVersion":"1.0.0.0"
+              }
+          }
+      }  
   ]
 }
