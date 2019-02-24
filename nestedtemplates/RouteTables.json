@@ -29,11 +29,11 @@
                        {
                            "type": "Microsoft.Network/routeTables",
                            "apiVersion": "2016-06-01",
-                           "location": "[parameters('routeTablesArray')[copyIndex(routeTables)].Region]",
-                           "name": "[parameters('routeTablesArray')[copyIndex(routeTables)].RouteName]",
-                           "addressPrefix": "[parameters('routeTablesArray')[copyIndex(routeTables)].addressPrefix]",
-                           "nextHopType": "[parameters('routeTablesArray')[copyIndex(routeTables)].nextHopType]",
-                           "nextHopIpAddress": "[parameters('routeTablesArray')[copyIndex(routeTables)].nextHopIpAddress]"
+                           "location": "[parameters('routeTablesArray')[copyIndex('routeTables')].Region]",
+                           "name": "[parameters('routeTablesArray')[copyIndex('routeTables')].RouteName]",
+                           "addressPrefix": "[parameters('routeTablesArray')[copyIndex('routeTables')].addressPrefix]",
+                           "nextHopType": "[parameters('routeTablesArray')[copyIndex('routeTables')].nextHopType]",
+                           "nextHopIpAddress": "[parameters('routeTablesArray')[copyIndex('routeTables')].nextHopIpAddress]"
                        }
                   ]
                }
