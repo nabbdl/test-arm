@@ -48,7 +48,7 @@
                                           "properties": {
                                               "addressPrefix": "[parameters('ParameterArray')[copyIndex('Vnets')].Subnets[copyIndex('subnets')].addressPrefix]",
                                               "routeTable": {
-                                                  "id": "[resourceId('Microsoft.Network/routeTables', [parameters('ParameterArray')[copyIndex('Vnets')].Subnets[copyIndex('subnets')].routeTable]"
+                                                  "id": "[resourceId('Microsoft.Network/routeTables', 'DefaultRouteTable')]"
                                               }  
                                           }
                                       }
