@@ -13,8 +13,7 @@
                         {
                             "name": "subnet-10-66-1-0-24",
                             "addressPrefix": "10.66.1.0/24",
-                            "routeTable": {
-                                "id": "[resourceId('Microsoft.Network/routeTables','DefaultRouteTable')]"
+                            "routeTable": "DefaultRouteTable"
                               }
                         },
                         {
