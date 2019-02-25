@@ -61,5 +61,10 @@
           }
       }
   ],
-  "outputs": {}
+  "outputs": {
+      "DEBUG": {
+          "type": "string",
+          "value": "[resourceId('Microsoft.Network/routeTables', parameters('ParameterArray')[copyIndex('Vnets')].Subnets[copyIndex('subnets')].rouTable)]"
+      }
+  }
 }
