@@ -17,28 +17,23 @@
                         },
                         {
                             "name": "subnet-10-66-2-0-24",
-                            "addressPrefix": "10.66.2.0/24",
-                            "routeTable": "None"
+                            "addressPrefix": "10.66.2.0/24"
                         },
                         {
                             "name": "subnet-10-66-3-0-24",
-                            "addressPrefix": "10.66.3.0/24",
-                            "routeTable": "None"
+                            "addressPrefix": "10.66.3.0/24"
                         },
                         {
                             "name": "subnet-10-66-4-0-24",
-                            "addressPrefix": "10.66.4.0/24",
-                            "routeTable": "None"
+                            "addressPrefix": "10.66.4.0/24"
                         },
                         {
                             "name": "subnet-10-66-5-0-24",
-                            "addressPrefix": "10.66.5.0/24",
-                            "routeTable": "None"
+                            "addressPrefix": "10.66.5.0/24"
                         },
                         {
                             "name": "subnet-10-66-10-0-24",
-                            "addressPrefix": "10.66.10.0/24",
-                            "routeTable": "None"
+                            "addressPrefix": "10.66.10.0/24"
                         }
                         
                     ],
